@@ -6,6 +6,15 @@ public class PersonBuilder {
     private String address;
     private int age;
 
+    public PersonBuilder() {
+    }
+
+    public PersonBuilder(String surname, int age, String address) {
+        this.surname = surname;
+        this.age = age;
+        this.address = address;
+    }
+
     public PersonBuilder setName(String name) { /*...*/
 
         this.name = name;

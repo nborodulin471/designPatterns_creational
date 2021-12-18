@@ -20,6 +20,10 @@ public class Person {
         this.age = age;
     }
 
+    public PersonBuilder newChildBuilder() {
+        return new PersonBuilder(surname, age, address);
+    }
+
     public boolean hasAddress(String address) {
         if (this.address.equals(address)) {
             return true;
@@ -68,10 +72,6 @@ public class Person {
             age += 1;
         }
 
-    }
-
-    public PersonBuilder newChildBuilder() {
-        return new PersonBuilder();
     }
 
     @Override
